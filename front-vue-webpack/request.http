@@ -1,0 +1,21 @@
+GET http://localhost:3000/api/users HTTP/1.1
+###
+GET http://localhost:3000/api/users/1 HTTP/1.1
+###
+GET http://localhost:3000/api/users/main HTTP/1.1
+###
+GET http://localhost:3000/api/users/one HTTP/1.1
+###
+POST http://localhost:3000/api/users/two HTTP/1.1
+Content-Type: application/json
+
+{
+    "userOneName": "우하하하",
+    "userOneAge": 99
+}
+###
+GET http://localhost:3000/api/users/testMapList HTTP/1.1
+###
+GET http://localhost:3000/api/users/testMapList?checkValue=ok HTTP/1.1
+###
+

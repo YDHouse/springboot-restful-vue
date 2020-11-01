@@ -1,0 +1,13 @@
+.myStyle {
+    font-weight: normal;
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.comm {
+    font-size: 20px;
+    color: brown;
+    font-style: italic;
+}
+
