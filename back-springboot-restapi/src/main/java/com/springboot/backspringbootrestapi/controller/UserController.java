@@ -1,4 +1,4 @@
-package com.springboot.restful.controller;
+package com.springboot.backspringbootrestapi.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,8 +9,8 @@ import java.util.TreeMap;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.springboot.restful.model.ResponseVO;
-import com.springboot.restful.model.UserVO;
+import com.springboot.backspringbootrestapi.model.ResponseVO;
+import com.springboot.backspringbootrestapi.model.UserVO;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;

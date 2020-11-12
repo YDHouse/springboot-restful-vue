@@ -1,4 +1,4 @@
-package com.springboot.restful.controller;
+package com.springboot.backspringbootrestapi.controller;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;

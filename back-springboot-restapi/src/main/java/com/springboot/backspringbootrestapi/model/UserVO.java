@@ -1,4 +1,4 @@
-package com.springboot.restful.model;
+package com.springboot.backspringbootrestapi.model;
 
 import lombok.Data;
 

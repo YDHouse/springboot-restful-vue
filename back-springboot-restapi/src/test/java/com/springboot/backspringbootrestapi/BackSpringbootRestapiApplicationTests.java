@@ -1,10 +1,10 @@
-package com.springboot.restful;
+package com.springboot.backspringbootrestapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RestfulApplicationTests {
+class BackSpringbootRestapiApplicationTests {
 
 	@Test
 	void contextLoads() {
