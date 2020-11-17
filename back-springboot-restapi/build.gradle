@@ -30,6 +30,7 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.11'
+}
 
 test {
 	useJUnitPlatform()
