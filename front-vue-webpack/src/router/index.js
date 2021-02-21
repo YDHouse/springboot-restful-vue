@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import NaverLogin from '@/components/NaverLogin'
-// import NaverLogin2 from '@/components/NaverLogin2'
+// import NaverLogin from '@/components/NaverLogin'
+import NaverLogin2 from '@/components/NaverLogin2'
+import NaverLoginCallBack from '@/components/NaverLoginCallBack'
 import TestVue from '@/components/TestVue'
+import TestVue2 from '@/components/TestVue2'
 
 Vue.use(Router)
 
@@ -16,13 +18,23 @@ export default new Router({
     },
     {
       path: '/login',
-      name: 'NaverLogin',
-      component: NaverLogin,
+      name: 'NaverLogin2',
+      component: NaverLogin2,
     },
     {
-      path: '/test',
+      path: '/loginCallBackNaver',
+      name: 'NaverLoginCallBack',
+      component: NaverLoginCallBack,
+    },
+    {
+      path: '/testVue',
       name: 'TestVue',
       component: TestVue,
+    },
+    {
+      path: '/testVue2',
+      name: 'TestVue2',
+      component: TestVue2,
     },
   ],
 })
