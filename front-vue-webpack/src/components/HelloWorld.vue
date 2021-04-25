@@ -36,10 +36,9 @@ export default {
   data() {
     return {
       msg: '메인페이지',
-      loginNaver:
-        '<a href="http://localhost:8080/#/login">네이버 간편로그인</a>',
-      testVue: '<a href="http://localhost:8080/#/testVue">뷰 테스트</a>',
-      testVue2: '<a href="http://localhost:8080/#/testVue2">뷰 테스트2</a>',
+      loginNaver: '<a href="http://localhost:8080/login">네이버 간편로그인</a>',
+      testVue: '<a href="http://localhost:8080/testVue">뷰 테스트</a>',
+      testVue2: '<a href="http://localhost:8080/testVue2">뷰 테스트2</a>',
       strs: '',
       testMapList: '',
       test1: '',

@@ -2,7 +2,7 @@
   <div id="appNaver">
     <NaverLogin
       client-id="TBZyaWSuJPbaBSgKsvTo"
-      callback-url="${window.location.origin}/loginNaverCB"
+      callback-url="${window.location.origin}/loginCallBackNaver"
       v-bind:is-popup="false"
       v-bind:button-type="3"
       v-bind:button-height="50"

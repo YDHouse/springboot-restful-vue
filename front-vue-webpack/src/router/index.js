@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 // import NaverLogin from '@/components/NaverLogin'
 import NaverLogin2 from '@/components/NaverLogin2'
+// import NaverLogin3 from '@/components/NaverLogin3'
 import NaverLoginCallBack from '@/components/NaverLoginCallBack'
 import TestVue from '@/components/TestVue'
 import TestVue2 from '@/components/TestVue2'
@@ -10,7 +11,13 @@ import TestVue2 from '@/components/TestVue2'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
+  hash: false,
   routes: [
+    {
+      path: '*',
+      redirect: '/',
+    },
     {
       path: '/',
       name: 'HelloWorld',
