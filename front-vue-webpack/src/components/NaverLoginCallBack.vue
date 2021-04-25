@@ -7,9 +7,9 @@ export default {
   mounted() {
     const naverLogin = new naver.LoginWithNaverId({
       clientId: 'TBZyaWSuJPbaBSgKsvTo',
-      // isPopup: false,
-      // callbackUrl: 'http://localhost:8081/#/loginCallBackNaver',
-      // callbackHandle: true,
+      callbackUrl: 'http://localhost:8080/loginCallBackNaver',
+      isPopup: true,
+      callbackHandle: false,
     })
     naverLogin.init()
     naverLogin.getLoginStatus((status) => {
@@ -35,7 +35,10 @@ export default {
         console.log('callback 처리에 실패하였습니다.')
       }
       // 페이지 이동
-      this.$router.push({ name: '/login' })
+      //window.opener.$router.push({ name: '/login' })
+      //window.opener.$router.push('/login')
+      window.opener.location.reload()
+      window.close()
     })
   },
 }
