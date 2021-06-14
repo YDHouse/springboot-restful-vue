@@ -9,8 +9,8 @@ import java.util.TreeMap;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.springboot.backspringbootrestapi.model.ResponseVO;
-import com.springboot.backspringbootrestapi.model.UserVO;
+import com.springboot.backspringbootrestapi.model.ResponseVo;
+import com.springboot.backspringbootrestapi.model.UserVo;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,11 +31,11 @@ public class UserController {
     // private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(UserController.class);
 
     @GetMapping
-    public ResponseVO<?> getUsers() {
-        ResponseVO<List<UserVO>> resp = new ResponseVO<>();
-        List<UserVO> list = new ArrayList<>();
-        list.add(new UserVO("테스터", "010-1111-2222"));
-        list.add(new UserVO("tester", "010-1111-3333"));
+    public ResponseVo<?> getUsers() {
+        ResponseVo<List<UserVo>> resp = new ResponseVo<>();
+        List<UserVo> list = new ArrayList<>();
+        list.add(new UserVo("테스터", "010-1111-2222"));
+        list.add(new UserVo("tester", "010-1111-3333"));
 
         if (list.isEmpty()) {
             log.info("null");
@@ -107,21 +107,38 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseVO<?> getUser(@PathVariable int id) {
-        ResponseVO<UserVO> resp = new ResponseVO<>();
+    public ResponseVo<?> getUser(@PathVariable int id) {
+        ResponseVo<UserVo> resp = new ResponseVo<>();
         
-        List<UserVO> list = new ArrayList<>();
-        list.add(new UserVO("테스터", "010-1111-2222"));
-        list.add(new UserVO("tester", "010-1111-3333"));
-        list.add(new UserVO("홍길동", "조선사람"));
+        List<UserVo> list = new ArrayList<>();
+        list.add(new UserVo("테스터", "010-1111-2222"));
+        list.add(new UserVo("tester", "010-1111-3333"));
+        list.add(new UserVo("홍길동", "조선사람"));
         
         resp.setResponse(list.get(id));
         return resp;
     }
 
     @GetMapping("/main")
-    public String MainController() {
-        return "하하하";
+    public ResponseVo<?> MainController(@RequestParam String projectId, @RequestParam List<String> resourceId) {
+        if (StringUtils.isEmpty(projectId) || resourceId.isEmpty()) {
+            log.info("null이야...");
+            return null;
+        }
+        log.info("============>>>>>" + projectId);
+        log.info("============>>>>>" + resourceId.size());
+        log.info("============>>>>>" + resourceId);
+
+        resourceId.forEach(item -> log.info("resourceId >>> " + item));
+
+        for (String item : resourceId) {
+            log.info("" + item);
+        }
+        // ObjectMapper mapper = new ObjectMapper();
+        // List<ResponseVO<?>> rep0 = mapper.readValue(queryStr, ResponseVO.class);
+        // List<ResponseVO<?>> rep1 = mapper.readValue(queryStr, new TypeReference<List<ResponseVO<?>>>(){});
+        // List<ResponseVO<?>> rep2 = mapper.readValue(queryStr, mapper.getTypeFactory().constructCollectionType(List.class, ResponseVO.class));
+        return null;
     }
 
     @GetMapping("/one")
